@@ -75,8 +75,8 @@ ModelImporter:
       name: idle
       takeName: Scene
       internalID: -8800838248204228948
-      firstFrame: 2
-      lastFrame: 287
+      firstFrame: 3
+      lastFrame: 288
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -191,8 +191,8 @@ ModelImporter:
       name: run
       takeName: Scene
       internalID: -8206857311389296499
-      firstFrame: 910
-      lastFrame: 1132
+      firstFrame: 911
+      lastFrame: 1128
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

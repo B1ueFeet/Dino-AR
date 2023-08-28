@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bbc67ca4855a2e249b163bf7a43042f8
+guid: c834f62f2b892ce4bab5837a8d3099ad
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Black Ops One
+  - Shadow of Xizor
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

@@ -50,8 +50,8 @@ public class EnviromentController : MonoBehaviour
     {
         foreach (GameObject element in elements)
         {
-            Debug.Log("ahora esta aca");
-            if (element.transform.position.x <= end.position.x) {
+
+            if (element.transform.position.x <= end.position.x ) {
                 element.transform.position = new Vector3(start.position.x,element.transform.position.y,element.transform.position.z);
             }
         }

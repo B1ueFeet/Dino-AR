@@ -6,6 +6,21 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
 
+    [SerializeField] private int jumpForce;
+    [SerializeField] private int obstacleSpeed;
+    [SerializeField] private int enviromentSpeed;
+    [SerializeField] private bool startGame = false;
+    [SerializeField] private bool pause;
+    [SerializeField] private int score;
+    [SerializeField] private int maxScore;
+
+    public  int JumpForce { get { return jumpForce; } }
+    public  int ObstacleSpeed { get { return obstacleSpeed; } set { obstacleSpeed = value; } }
+    public  int EnviromentSpeed { get { return enviromentSpeed; } set{ enviromentSpeed = value; } }
+    public  bool StartGame { get { return startGame; } set { startGame = value; } }
+    public  bool Pause { get { return pause; } }
+    public  int Score { get { return score; } }
+    public  int MaxScore { get { return maxScore; } }
 
     //CREAR EL SINGELTON
     public static GameManager Instance
@@ -48,5 +63,7 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
     }
+
+
 
 }

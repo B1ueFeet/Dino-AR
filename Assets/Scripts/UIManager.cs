@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -51,7 +52,7 @@ public class UIManager : MonoBehaviour
 
     public void Pause()
     {
-        GameObject canvasObject = GameObject.Find("CanvasController");
+        GameObject canvasObject = GameObject.Find("GeneralCanvas");
         Transform canvasPause = canvasObject.transform.Find("CanvasPause");
 
 
@@ -73,5 +74,9 @@ public class UIManager : MonoBehaviour
             }
         }
     }
+
+
+
+
 
 }
