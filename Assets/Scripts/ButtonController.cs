@@ -17,7 +17,7 @@ public class ButtonController : MonoBehaviour
     }
     public void Play()
     {
-        GameController.Instance.Mostrar();
+        GameController.Instance.Iniciar();
     }
 
     public void Pause()

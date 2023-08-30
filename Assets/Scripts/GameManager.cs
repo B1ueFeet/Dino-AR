@@ -19,8 +19,8 @@ public class GameManager : MonoBehaviour
     public  int EnviromentSpeed { get { return enviromentSpeed; } set{ enviromentSpeed = value; } }
     public  bool StartGame { get { return startGame; } set { startGame = value; } }
     public  bool Pause { get { return pause; } }
-    public  int Score { get { return score; } }
-    public  int MaxScore { get { return maxScore; } }
+    public  int Score { get { return score; } set { score = value; } }
+    public  int MaxScore { get { return maxScore; } set { maxScore = value; } }
 
     //CREAR EL SINGELTON
     public static GameManager Instance
@@ -58,12 +58,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    
-
-    public void Start()
+    public void actualizarMaxScore()
     {
+        if (this.maxScore < score)
+        {
+            maxScore = score;
+        }
     }
 
-
-
+    public void sumarPuntos()
+    {
+        score += 1;
+    }
 }

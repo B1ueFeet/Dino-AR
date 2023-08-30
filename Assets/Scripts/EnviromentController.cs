@@ -26,6 +26,8 @@ public class EnviromentController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!GameManager.Instance.StartGame) moveSpeed = 0;
+        else moveSpeed = 1.0f;
         ManageMovement();
         ManageParallax();
         ManageSpawn();

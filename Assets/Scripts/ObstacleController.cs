@@ -8,9 +8,10 @@ public class ObstacleController : MonoBehaviour
     [SerializeField]private bool canInstantiate;
     [SerializeField] private Transform end;
     [SerializeField] private bool start;
+    [SerializeField] private Transform player;
     void Start()
     {
-        moveSpeed = GameManager.Instance.ObstacleSpeed;
+        
         start = GameManager.Instance.StartGame;
         
     }
@@ -21,7 +22,8 @@ public class ObstacleController : MonoBehaviour
 
     void Update()
     {
-        if (start)
+        moveSpeed = GameManager.Instance.ObstacleSpeed;
+        if (GameManager.Instance.StartGame)
         {
             elapsedTime += Time.deltaTime;
             if (elapsedTime >= repeatTime)
@@ -35,6 +37,7 @@ public class ObstacleController : MonoBehaviour
                 GameObject obstacle = ObstaclePooling.Instance.Request();
                 obstacle.transform.position = transform.position;
                 canInstantiate = false;
+                //if (obstacle.tag == "pterodactyl") SoundManager.PlaySound(SoundManager.Sound.pterodactyl);
                 StartCoroutine(MoveObstacle(obstacle));
             }
         }
@@ -45,6 +48,10 @@ public class ObstacleController : MonoBehaviour
         while (obstacle != null)
         {
             obstacle.transform.Translate(new Vector3(0f, 0f, -moveSpeed * Time.deltaTime));
+            if (obstacle.transform.position.x == player.position.x)
+            {
+                GameManager.Instance.sumarPuntos();
+            }
             if (obstacle.transform.position.x <= end.position.x )
             {
                 obstacle.gameObject.SetActive(false); 
