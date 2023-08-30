@@ -7,6 +7,8 @@ public class ButtonController : MonoBehaviour
 {
     [SerializeField]
     private GameObject playButton;
+    [SerializeField] private GameObject principal;
+    [SerializeField] private GameObject creditos;
     public void GameInit()
     {
         UIManager.Instance.ChangeScene("Game");
@@ -27,7 +29,14 @@ public class ButtonController : MonoBehaviour
 
     public void Credits()
     {
+        principal.gameObject.SetActive(false);
+        creditos.gameObject.SetActive(true);
+    }
 
+    public void Regresar()
+    {
+        principal.gameObject.SetActive(true);
+        creditos.gameObject.SetActive(false);
     }
 
     public void ShowPlayButton()

@@ -7,6 +7,7 @@ public class CaracterController : MonoBehaviour
     [SerializeField] float jumpForce;
     private Rigidbody rb;
     private bool isGround = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,5 +33,10 @@ public class CaracterController : MonoBehaviour
         {
             isGround = true;
         }
+    }
+
+    public void playStep()
+    {
+        SoundManager.PlaySound(SoundManager.Sound.playerSteep01);
     }
 }
